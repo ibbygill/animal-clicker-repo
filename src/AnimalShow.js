@@ -1,3 +1,5 @@
+import './AnimalShow.css';
+
 import bird from './svg/bird.svg';
 import cat from './svg/cat.svg';
 import spider from './svg/spider.svg';
@@ -31,13 +33,18 @@ function AnimalShow({ type }) {
     };
     
     return (
-    <div onClick={handleClick}> 
-        <img alt="animal" src={svgMap[type]} width="100" length="100" />
+    <div className="animal-show" onClick={handleClick}> 
         <img 
+            className="animal" 
+            alt="animal" 
+            src={svgMap[type]} 
+        />
+        <img 
+            className="heart"
             alt="heart" 
             src={heart}
             style={{
-                width: 10 + 10 * clicks + 'px'
+            width: 10 + 10 * clicks + 'px'
             }}
         />    
     </div>
